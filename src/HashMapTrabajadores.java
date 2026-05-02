@@ -41,6 +41,10 @@ public class HashMapTrabajadores {
     public static void agregarTrabajador(Map<String, Double> trabajadores, Scanner scanner) {
         System.out.println("Escriba el nombre del trabajador");
         String nombre = scanner.nextLine();
+        // Validar si ya existe
+        if (trabajadores.containsKey(nombre)) {
+            System.out.println("El trabajador " + nombre + " ya existe");
+        }
         System.out.println("Escriba el salario del trabajador");
         double salario = scanner.nextDouble();
         scanner.nextLine();
